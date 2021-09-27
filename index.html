@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>燃烧吧 leeks</title>
+    <link href="./src/img/logo1.png" rel="shortcut icon">
+    <link rel="stylesheet" href="./src/css/index.css">
+    <link rel="stylesheet" href="./src/css/dh.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+</head>
+<body>
+<div>
+    <div class='head'>
+        <div class="tm-site-branding">
+            <a href="http://leeks.tech/" class="tm-logo-link">
+                <img src="./src/img/logo1.png"  alt="" class="tm-logo">
+            </a>
+        </div>
+        <div class='user'>
+            <span id='my-address'></span>
+            <br/>
+            <span>
+                <span>我的lp：</span>
+                 <span class='leeks' id='my-count'>0</span>
+            </span>
+        </div>
+    </div>
+    <div class='luck-mes'>
+       <div class='luck-lp'>
+            <div >
+                <span>我的锁仓数:</span>
+                <span id='my-token'>0</span>
+            </div>
+            <div>
+                <span>总锁仓数量:</span>
+                <span style='color: #ffbf01; font-weight: bold;' id='all-leeks'>0</span>
+            </div>
+       </div>
+       <div>
+           <img width="50px" src="./src/img/jl.svg" alt="">
+       </div>
+    </div>
+    <div class="scroll-box">
+        <ul id='scroll-list'>
+
+        </ul>
+    </div>
+    <div class='activity-name'>韭菜董事会</div>
+    <div class='activity-item'>
+        <div class='activity-gngle'>
+            LP池<br>
+
+        </div>
+        <div class='activity-logo'>
+            <img src="./src/img/jl.svg" alt="">
+        </div>
+        <div class="activity-time">
+            <span>锁仓倒计时</span>
+            <span class='activity-time-w' id='open-time'>
+                <span>00</span>
+                <span>:</span>
+                <span>00</span>
+                <span>:</span>
+                <span>00</span>
+                <span>:</span>
+                <span>00</span>
+            </span>
+        </div>
+        <div class="btx">
+            <button class='btn-1' style='display: none' id='btn-1'>参与分红</button>
+            <!--        <button class='btn-2' style='display: none' id='btn-6'>即将开奖</button>-->
+            <!--        <button class='btn-2' style='display: none' id='btn-7'>即将开始下一期</button>-->
+            <button class='btn-2' style='display: none' id='btn-2'>解锁功能</button>
+            <!--        <button class='btn-1' style='display: none' id='btn-5'>抢头奖</button>-->
+            <button class='btn-2' style='display: none' id='btn-10'>提取质押</button>
+        </div>
+        <p class='activity-explain'>
+            参与锁仓LP董事会，获取分红
+        </p>
+        <div class='destruction-get' style='padding: 0;'>
+            <a href="https://hecoinfo.com/address/0x9a1da1f8E3e2b9F4E217141b0aD23190238ba3B6">合约地址</a>
+        </div>
+    </div>
+
+    <div class="open-game-box"  id='game-rules-btn'>
+        <span>分红规则&nbsp;</span>
+        <div class='game-rules-btn'>
+            &#xe646;
+        </div>
+    </div>
+    <p class='game-rules' id='game-rules-tip'>
+        为了增加大家共识，避免有投机者破坏<br/>
+        董事会开启60天基础锁仓<br/>
+        60天后，懂事们可以自由提取质押<br/>
+        当然在质押期间，每十天社区会为董事们分红一次，数量由质押比例来决定<br/>
+        <br>
+        <span style='font-size: 1.4rem;font-weight: bold; color: rgb(250, 121, 0)'>
+<!--            您投入的LEEKS将会被销毁，请慎重考虑后参与.-->
+        </span>
+    </p>
+    <div class='history-dog' id='history-dog-box'></div>
+
+    <ul class="media-list">
+        <li>
+            <a href="https://t.me/Leekvip1">
+                <span>&#xe62b;</span>
+                <br>
+                <span>电报</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://0.plus/leekvip1">
+                <span>&#xe601;</span>
+                <br>
+                <span>btok</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitter.com/Leektogether2">
+                <span>&#xea90;</span>
+                <br>
+                <span>推特</span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/LeeksTechFoundation/leekstech-web">
+                <span>&#xe718;</span>
+                <br>
+                <span>github</span>
+            </a>
+        </li>
+        <li>
+            <a href="http://farm.leeks.tech">
+                <span>&#xe60c;</span>
+                <br>
+                <span>挖矿</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class='mask' id='mask'>
+    <div class='add-destruction' id='add-destruction'>
+        <button class='btn-c' id='btn-close'>&#xe7ce;</button>
+        <div class='activity-logo'>
+            <img style='height: 10rem' src="https://cdn.jsdelivr.net/gh/mdexSwap/mdexSwap.github.io@2.0/img/footer-jx.8ffe4eb3.png" alt="">
+        </div>
+        <p class='destruction-t1'>
+            我的LP&nbsp;<span id='max-token'>0</span>
+        </p>
+        <div class='destruction-input'>
+           <div class='destruction-input-i'>
+                <input type="text" id='add-input'>
+                <button class='btn-4' id='add-max'>最大</button>
+           </div>
+            <button class='btn-3' id='confirm-exchange'>确定添加</button>
+            <p class='destruction-tip' id='destruction-tip'>err</p>
+            <p class='destruction-tip1' id='destruction-tip1'>兑换成功</p>
+        </div>
+        <p class='destruction-get'>
+<!--            <a href="https://ht.mdex.com/#/swap?inputCurrency=0xa71edc38d189767582c38a3145b5873052c3e47a&outputCurrency=0x526fd564B1E04d407A5C90fBE29e8eB28557Bf57">获取LP</a>-->
+        </p>
+    </div>
+    <div class='loading' id='loading'>
+        <div class='loading-ing' id='loading-ing'>
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+            <p>请求中，请稍等!</p>
+        </div>
+        <div class='loading-success' id='loading-success'>
+            <div>&#xe61a;</div>
+            <p>兑换成功！</p>
+            <button class='btn-1 loading-bt' id='loading-bt-suc'>好的</button>
+        </div>
+        <div class='loading-success' id='loading-err'>
+            <div>&#xe633;</div>
+            <p>兑换失败！</p>
+            <button class='btn-1 loading-btn' id='loading-bt-err'>知道了</button>
+        </div>
+
+        <div class='luck-open-success' id='luck-open'>
+            <div>
+                <img src="./src/img/jl.svg" alt="">
+            </div>
+            <p id='luck-open-mes' class='luck-open-mes'></p>
+            <p class='luck-explain' id='luck-open-other'></p>
+            <button class='btn-1 loading-btn' id='luck-close'>好的</button>
+        </div>
+        <div class='luck-open-success' id='luck-open-none'>
+            <div>
+                <img src="./src/img/ch.png" alt="">
+            </div>
+            <p id='luck-open-none-mes' class='luck-open-mes' style='margin: 5px 0 25px 0'></p>
+            <button class='btn-1 loading-btn' id='luck-close-none' >好的</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/web3/1.3.5/web3.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/bignumber.js/9.0.1/bignumber.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="./src/js/index.js"></script>
+</body>
+</html>
