@@ -368,7 +368,6 @@ background: #ffc107;
 .game-rules {
     padding: 0px 25px 15px;
     line-height: 20px;
-    display: none;
 }
 .game-rules-btn {
     font-family: iconfont;
